@@ -4,14 +4,19 @@ Projected started: July 2025
 
 -------------
 
-This repository was used to produce the files needed to create a template ArcGIS dashboard of CCRP's CMIP5 climate futures: https://geospatial.nps.gov/portal/apps/dashboards/b1b53badc7834d8083ff7d7f761b35de
-It includes scripts to create .csv and .gpkg files that can be read into ArcGIS as feature layers that are associated with dashboard elements.
+This repository was used to produce the files needed to create piloted dashboards of CCRP's CMIP5 climate futures. Dashboards included:
+- PowerBI: https://doimspp.sharepoint.com/:f:/r/sites/nps-waso-ccrp/Shared%20Documents/01%20PROJECT%20Collaboration/Science,%20Adaptation,%20Planning/Climate%20Futures/Data_Visualizations/PowerBI%20CF%20Dashboard
+- ArcGIS: https://doimspp.sharepoint.com/:f:/r/sites/nps-waso-ccrp/Shared%20Documents/01%20PROJECT%20Collaboration/Science,%20Adaptation,%20Planning/Climate%20Futures/Data_Visualizations/ArcGIS%20CF%20Dashboard
+  - Without spatial data (v1): https://geospatial.nps.gov/portal/apps/dashboards/bccd3bfbf0114c2ab2580f0d3747a449
+  - With spatial data (v2): https://geospatial.nps.gov/portal/apps/dashboards/b1b53badc7834d8083ff7d7f761b35de
 
-For dashboard v1 (https://geospatial.nps.gov/portal/apps/dashboards/bccd3bfbf0114c2ab2580f0d3747a449), Alaska parks (CAKR, KOVA) were piloted because we had just run those parks' climate futures and the R scripts / outputs were in an easily usable state. These were used to produce bar charts across multiple climate variables using script time-series.R.
+It includes scripts to create .xlsx and .topojson files that can be read into PowerBI and .csv and .gpkg files that can be read into ArcGIS as feature layers that are associated with dashboard elements.
 
-For dashboard v2 (https://geospatial.nps.gov/portal/apps/dashboards/b1b53badc7834d8083ff7d7f761b35de), where we incorporated temporal and spatial data, only CONUS parks (EVER, GRCA, ISRO, OLYM) were used so that they matched the MACA spatial climate variable data we had, which we did not have for the AK parks. 
+For PowerBI and dashboard v1, Alaska parks (CAKR, KOVA) were piloted because we had just run those parks' climate futures and the R scripts / outputs were in an easily usable state. These were used to produce bar charts across multiple climate variables using time-series.R and spatial.R scripts.
+
+For dashboard v2, where we incorporated temporal and spatial data, only CONUS parks (EVER, GRCA, ISRO, OLYM) were used so that they matched the MACA spatial climate variable data we had, which we did not have for the AK parks. 
 - The bar chart and times series outputs came from the 2024 Climate Future Summaries folders and were produced using script time-series-v2.R.
-- The spatial outputs came from MACA climate variable data found at https://climate.northwestknowledge.net/PATH_TO_TIFS/MACAV2METDATA/TIF/ and were produced using spatial.R, spatial_v2.R, and spatial_ISRO.R scripts. These were different attempts I had made. The only fully successful one I ran was ISRO using script spatial_ISRO.R for the variable 'tasmax'.
+- The spatial outputs came from MACA climate variable data found at https://climate.northwestknowledge.net/PATH_TO_TIFS/MACAV2METDATA/TIF/ and were produced using spatial_v2.R, and spatial_ISRO.R scripts. I honestly don't remember the difference between the two, but spatial_v2 seems to be more robust. The parK I was fully successful in running was ISRO for the variable 'tasmax'.
 
 The MACA climate variable data I downloaded were:
 - macav2metdata_tasmax_ANN_19712000_historical_CCSM4.tif
